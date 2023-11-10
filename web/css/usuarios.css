@@ -1,0 +1,76 @@
+/* Para los formularios en general */
+.elemsForm {
+    width: 450px;
+}
+
+.labelUsu {
+    text-align: left;
+    font-family: Japan Wave;
+    font-size: 20px;
+    user-select: none;
+}
+
+.inputUsu {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.btnSubmit {
+    border-color: #ee99b7;
+    background-color: #eb84a8;
+}
+
+.btnSubmit:hover {
+    opacity: 90%;
+    border-radius: 15px;
+}
+
+.mensajeError {
+    margin: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+/* Para el registro de usuarios */
+#registroUsu {
+    width: 1000px !important;
+    padding: 20px;
+}
+
+#formIzquierda {
+    justify-content: flex-end;
+}
+
+#formDerecha {
+    justify-content: flex-start;
+}
+
+#btnRegistrar {
+    width: 100%;
+}
+
+/* Para el inicio de sesión */
+#inicioSesion {
+    padding: 40px 10px 10px 10px;
+    text-align: center;
+}
+
+/* Para el cierre de sesión */
+#mensajeCierre {
+    text-align: center;
+}
+
+#mensajeCierre > * {
+    margin: 15px 0 15px 0;
+}
+
+#mensajeCierre > span:first-child {
+    font-size: 40px;
+}
+
+#imgDespedida {
+    width: 350px;
+    height: 300px;
+}

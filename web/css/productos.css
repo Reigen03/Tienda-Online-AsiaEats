@@ -1,0 +1,169 @@
+/* Sección de productos */
+#anuncio {
+    width: 70%;
+    height: 90%;
+}
+
+.producto {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 'img img img img'
+                         'img img img img'
+                         'nom nom nom nom'
+                         'det det prec prec';
+}
+
+.producto > * {
+    margin: 2px;
+    padding: 5px;
+}
+
+.imgProd {
+    grid-area: img;
+}
+
+.prodImg {
+    width: 270px;
+    height: 275px;
+}
+
+.nombreProd {
+    grid-area: nom;
+}
+
+.nombreProd > a {
+    text-decoration: none;
+}
+
+.txtNom {
+    color: #1d1b1b;
+    width: 270px;
+    font-weight: bold;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.txtNom:hover {
+    color: #ec7dc2;
+    cursor: default;
+}
+
+.detallesProd {
+    grid-area: det;
+}
+
+.btnDet {
+    padding: 5px 15px 5px 15px;
+    background-color: #ec7dc2;
+    border: 1px solid #e98ec6;
+    border-radius: 10px;
+}
+
+.btnDet:hover {
+    filter: opacity(90%);
+    border-radius: 12.5px;
+    cursor: pointer;
+}
+
+.precioProd {
+    grid-area: prec;
+}
+
+
+/* Ventana modal de detalles */
+#contenedorModal {
+    display: grid;
+    grid-template-areas: 'nomDet nomDet btnCrr'
+                         'imgDet descDet descDet'
+                         'imgDet descDet descDet'
+                         'cantDet btnDet precDet';                
+}
+
+#contenedorModal {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#contenedorModal > div {
+    padding: 10px;
+}
+
+#btnCerrar {
+    grid-area: btnCrr;
+}
+
+#imgDet {
+    grid-area: imgDet;
+}
+
+#imgDet > img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+#nomDet {
+    grid-area: nomDet;
+    align-items: flex-end;
+}
+
+#spanNom {
+    color: #1d1b1b;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+#descDet {
+    grid-area: descDet;
+}
+
+#btnDets{
+    grid-area: btnDet;
+    justify-content: flex-end;
+}
+
+#imagenCarrito {
+    width: 25px;
+    height: 25px;
+}
+
+#cantDets {
+    grid-area: cantDet;
+}
+
+#cantProd {
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #e98ec6;
+    border-radius: 15px;
+}
+
+#precDet {
+    grid-area: precDet;
+    justify-content: flex-start;
+}
+
+/*** ANIMACIONES ***/
+@keyframes aparicion {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes desaparicion {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}

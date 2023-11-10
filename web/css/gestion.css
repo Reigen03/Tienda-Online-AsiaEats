@@ -1,0 +1,50 @@
+/* Cabecera */
+#tituloAdmin {
+    font-family: Japan Wave;
+    font-size: 35px;
+    user-select: none;
+}
+
+
+/* Seccion de gestión general */
+.tablaGestion {
+    margin: 10px 0 10px 0;
+}
+
+.btnAdd {
+    width: fit-content !important;
+    margin: 10px 0 10px 0;
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+tr:not(tr:first-child):hover > td {
+    background-color: rgba(252, 195, 239, 0.664);
+}
+
+tr:first-child > td {
+    border-bottom: 1px solid #cccccc83 !important;
+    font-family: Bumbu Sushi;
+    user-select: none;
+}
+
+td {
+    max-width: 250px;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+td > img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+/* Ventanas modales */
+.modalGestion {
+    padding: 10px;
+    text-align: center;
+}

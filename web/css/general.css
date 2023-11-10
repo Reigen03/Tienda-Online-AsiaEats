@@ -1,0 +1,327 @@
+/* Estilos generales */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s ease !important;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+header, #menu, .tituloPagina {
+    user-select: none;
+}
+
+.hijosCentrados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoverSimple:hover {
+    filter: grayscale(10%);
+    opacity: 85%;
+    cursor: pointer;
+}
+
+.tituloEnlaces {
+    font-size: 20px;
+    color: #443e3e;
+}
+
+.enlace, .activo {
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.2s none;
+}
+
+.enlace {
+    color: white;
+}
+
+.enlace:hover, .activo {
+    color: rgb(46, 44, 44);
+}
+
+.activo:hover {
+    cursor: default;
+}
+
+.boton {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px 10px 15px;
+    margin: 0 5px 0 5px;
+    background-color: #ec7dc2;
+    border: 1px solid #e98ec6;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    filter: opacity(85%);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/* Cabecera */
+header {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    background: rgb(235,184,202);
+    background: linear-gradient(90deg, rgb(241, 195, 212) 0%rgb(236, 163, 189) 100%);
+}
+
+#logo {
+    width: 105px;
+    height: 100px;
+}
+
+#logo:hover {
+    transform: rotate(-20deg);
+}
+
+#buscador {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+}
+
+#buscador:hover {
+    border-color: rgb(233, 165, 188);
+}
+
+#contIconos {
+    display: grid;
+    grid-template-areas: "usuario carrito idiomas"
+                         "nombre nombre nombre";
+}
+
+#desplegableUsu {
+    grid-area: usuario;
+    position: relative;
+    display: inline-block;
+}
+
+.icono {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+#opcionesUsu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgb(231, 144, 173);
+    border: 1px solid rgb(105, 102, 102);
+    box-shadow: 1px 1px 10px gray;
+    text-align: center;
+}
+
+#opcionesUsu > a {
+    color: white;
+    text-decoration: none;
+    transition: all 0s linear;
+}
+
+#opcionesUsu > a:hover {
+    color: black;
+    background-color: rgba(233, 154, 180, 0.801);
+    border-radius: 10px;
+}
+
+#desplegableUsu:hover > #opcionesUsu {
+    display: block;
+}
+
+#iconCart {
+    grid-area: carrito;
+}
+
+#idiomas {
+    grid-area: idiomas;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgb(233, 155, 181);
+    border: 1px solid rgb(235, 154, 181);
+    border-radius: 25px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+#nombreUsuario {
+    grid-area: nombre;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Menú */
+#menu {
+    padding: 10px;
+    background-color: rgb(238, 153, 183);
+}
+
+#menu > * {
+    width: fit-content !important;
+}
+
+/* Sección principal */
+.mainSec {
+    padding: 25px 40px 40px 40px;
+}
+
+.tituloPagina {
+    font-family: Bumbu Sushi;
+    font-size: 22px;
+    color: #443e3e;
+    text-align: center;
+}
+
+.tituloPagina:hover {
+    animation-name: saltito;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    cursor: default;
+}
+
+/* Ventanas modales */
+.ventanaModal {
+    display: none;
+    position: fixed;
+    width: 60%;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #a8a2a8;
+    border-radius: 15px;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+/* Inputs básicos */
+.labelForm {
+    width: 450px;
+    text-align: left;
+    font-family: Japan Wave;
+    font-size: 20px;
+    user-select: none;
+}
+
+.elemForm {
+    width: 450px;
+    margin-bottom: 7.5px;
+    padding: 7.5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Ventana de carrito */
+#modalCarrito {
+    padding: 15px;
+    height: 550px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+#contBoton, #contTit, #productosCar {
+    width: 100%;
+}
+
+#contBoton {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contTit {
+    text-align: center;
+}
+
+#productosCar, #productosCar > tr > td {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+}
+
+#productosCar > tr:hover > td {
+    background-color: #eca5d1;
+}
+
+#contBtnPed {
+    margin: 10px 0 5px 0;
+}
+
+/* Footer */
+footer {
+    padding: 15px 5px 15px 5px;
+    background: rgb(236, 163, 189);
+    background: linear-gradient(90deg, rgb(236, 163, 189) 0% rgb(241, 195, 212) 100%);
+    text-align: center;
+}
+
+
+/*** ANIMACIONES ***/
+@keyframes saltito {
+    from {
+        position: relative;
+        bottom: 0;
+    }
+
+    to {
+        position: relative;
+        bottom: 2px;
+    }
+}
+
+@keyframes aparicion {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes desaparicion {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+
+/*** FUENTES ***/
+@font-face {
+    font-family: "Japan Wave";
+    src: url("../../dependencias/fuentes/JapanWave.ttf");
+}
+
+@font-face {
+    font-family: "Bumbu Sushi";
+    src: url("../../dependencias/fuentes/bBumbuSushi.ttf");
+}
+
+@font-face {
+    font-family: "Moyko";
+    src: url("../../dependencias/fuentes/Moyko.ttf");
+}
